@@ -1,0 +1,68 @@
+1 pas este definirea regulilor de parsare sau de formatare (. , spatiu tot , 
+numerele nu le vreau in calcul , tot ce tine de numere si de calcul)
+---------
+Inainte sa le separa pe randuri le formateaza si scoate toate semnele de punctuatie, 
+ia din stanga lui intotdeauna si ala il va considera 
+---------
+2 pas din propozitie folosim libraria , in momentul in care gaseste spatiu sau liniuta
+da enter. si le face asa (Ana are mere).  Ana
+							are
+							mere.(functia stem) 
+
+- si daca gaseste acelasi cuvant itereaza contoru
+
+ia titlurile si le imparte si le ia ca si cuvinte principale
+----------
+
+3 pas pentru fiecare cuvant da split si le baga din word list() si de cate ori apare.
+in acelasi timp - face ce contine fiecare dictionar local si fiecare dictionar global
+
+
+4 pas facem topicurile - topics filtering = asignezi la fiecare document o cheie si se
+atribuie unui topic 
+facem un token si il atribui unui topic.Extrag topicurile si dupa filtrez dictionarele 
+si topicurile 
+
+
+5 pas filtreaza dictionarele global 
+
+
+6 pas facem reprezentare de dataset (iei documentu, cuvintele care le are si le pui intro
+matrice)
+
+
+7 pas (calculeaza entropia-->la information_gain o calculeaza)
+Entropia reprezinta un random cu cat randomul e mai mare cu atat e entropia mai mare
+cuvantu asta se include in topicu asta si tot asa?
+p - topicul
+i - sunt cuvintele
+
+
+8 pas calculezi gain pe cuvinte 
+Gain-ul foloseste entropia sa ia decizii(frecventa de aparitie si folosim ca pe copacul
+de decizii)
+
+9 pas normalizeaza datele adica le interpreteaza(contin chestiile care apar la rulare)
+
+
+
+----------
+findall = functie de rejecs (cauta un pattern in paragraph) <text> <p> spre exemplu
+getstopwords - cuvintele care sunt de oprire le ia (sunt date de noi)
+daca e un stop word eliminal daca nu ial si dai count
+
+dictionarul final = iti atribuie la fiecare cuvant contorul 
+normalized_score = e matricea de cate ori apare respectivul cuvant intrun document
+most_significant_atributes = cuvintele cu contor cel mai mare
+extract_topics = findall , patternul dupa ce vrea sa caute (Parsez tot fisierul si vad ce 
+pattern are)
+local_dictionary_filtering = te folosesti de most segnificant attribut, si scazi cuvintele
+recurente
+mean_accuracy = acuratetea
+
+
+La rulare printeaza :
+predicted value
+al doilea rand printat = dataset-ul de reprezenare - clasele de testaere
+face cu libraria greutatile - face un average 
+acuratetea de predictie (main_accuracy) - (scrisa in procent) 
